@@ -1,0 +1,256 @@
+{
+  "info": {
+    "_postman_id": "668bb853-5ed8-411a-b9f7-8531eb876942",
+    "name": "Prova",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56199330",
+    "_collection_link": "https://go.postman.co/collection/56199330-668bb853-5ed8-411a-b9f7-8531eb876942?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Cadastrar um Diretor",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Christopher Nolan\",\r\n  \"nacionalidade\": \"Britânico\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/diretores",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "diretores"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar um Filme",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"A Origem\",\r\n  \"description\": \"Um ladrão que rouba segredos corporativos por meio do uso de tecnologia de compartilhamento de sonhos.\",\r\n  \"duration\": 148,\r\n  \"releaseDate\": \"2010-07-16\",\r\n  \"imageUrl\": \"https://link-da-imagem.com/poster.jpg\",\r\n  \"score\": 8.8,\r\n  \"genres\": [\"Ficção Científica\", \"Ação\"],\r\n  \"diretorId\": 4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/filmes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "filmes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Tudo",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/filmes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "filmes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Não Encontrado",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"erro\": \"Filme não encontrado\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/filmes/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "filmes",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Regra de Negócio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"A Origem\",\r\n  \"description\": \"Um ladrão que rouba segredos corporativos por meio do uso de tecnologia de compartilhamento de sonhos.\",\r\n  \"duration\": 148,\r\n  \"releaseDate\": \"2010-07-16\",\r\n  \"imageUrl\": \"https://link-da-imagem.com/poster.jpg\",\r\n  \"score\": 11.5,\r\n  \"genres\": [\"Ficção Científica\", \"Ação\"],\r\n  \"diretorId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/filmes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "filmes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar Diretor",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Christopher Nolan\",\r\n  \"nacionalidade\": \"Inglês\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/diretores/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "diretores",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar Filme",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"A Origem\",\r\n  \"description\": \"Um ladrão que rouba segredos corporativos por meio do uso de tecnologia de compartilhamento de sonhos.\",\r\n  \"duration\": 148,\r\n  \"releaseDate\": \"2010-07-16\",\r\n  \"imageUrl\": \"https://link-da-imagem.com/poster.jpg\",\r\n  \"score\": 9.0,\r\n  \"genres\": [\"Ficção Científica\", \"Ação\"],\r\n  \"diretorId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/filmes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "filmes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Filme",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/filmes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "filmes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Diretor",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/diretores/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "diretores",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
